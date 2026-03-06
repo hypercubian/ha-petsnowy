@@ -6,7 +6,7 @@
 
 <p align="center">
   Custom <a href="https://www.home-assistant.io/">Home Assistant</a> integration for local-network control of <a href="https://www.petsnowy.com/">PetSnowy</a> smart pet devices via the Tuya protocol.<br>
-  No cloud dependency — all communication stays on your LAN.
+  No cloud dependency - all communication stays on your LAN.
 </p>
 
 <p align="center">
@@ -29,6 +29,14 @@
   </a>
 </p>
 
+<br>
+<br>
+<br>
+
+<p align="right">
+  <a href="https://github.com/hypercubian"><img src="images/hypercubian.png" height="60" alt="by Hypercubian"></a>
+</p>
+
 ---
 
 ## Supported Devices
@@ -37,7 +45,7 @@
 |--------|-------------|-------|----------|-------------|
 | **Self-Cleaning Litter Box** | SNOW+ Automatic Self-Cleaning Litter Box | PS-001 | 3.4 | Smart litter box with auto-clean, deodorization, cat weight tracking, and safety sensors |
 | **Water Fountain** | SNOW+ Automatic Pet Water Fountain | PS-010 | 3.3 | Filtered water fountain with normal/night modes and pump monitoring |
-| **Air Purifier** | PETSNOWY Pet Air Purifier | — | 3.4 | TVOC-sensing air purifier with 6-speed fan, ionizer, and auto-off timer |
+| **Air Purifier** | PETSNOWY Pet Air Purifier | - | 3.4 | TVOC-sensing air purifier with 6-speed fan, ionizer, and auto-off timer |
 | **Pet Feeder** | SNOW+ Automatic Pet Feeder | PS-020 | 3.3 | Automatic feeder with food level detection and on-demand dispensing |
 
 > **Note:** The OilClear A.I Series Wireless Weight-Sensing Pet Fountain is a newer model and is not yet supported. Contributions welcome!
@@ -65,10 +73,10 @@
 2. Search for **PetSnowy**
 3. Select your device type (Litterbox, Fountain, Purifier, or Feeder)
 4. Enter the Tuya credentials for your device:
-   - **Device ID** — Tuya device identifier
-   - **IP Address** — local network address of the device
-   - **Local Key** — Tuya local encryption key
-   - **Protocol Version** — auto-filled based on device type (3.3 or 3.4)
+   - **Device ID** - Tuya device identifier
+   - **IP Address** - local network address of the device
+   - **Local Key** - Tuya local encryption key
+   - **Protocol Version** - auto-filled based on device type (3.3 or 3.4)
 
 The integration validates connectivity before completing setup.
 
@@ -81,7 +89,7 @@ pip install tinytuya
 python -m tinytuya wizard
 ```
 
-Follow the wizard prompts — you'll need a [Tuya IoT Platform](https://iot.tuya.com/) account linked to your PetSnowy app account.
+Follow the wizard prompts - you'll need a [Tuya IoT Platform](https://iot.tuya.com/) account linked to your PetSnowy app account.
 
 ## Entities
 
@@ -124,10 +132,10 @@ Follow the wizard prompts — you'll need a [Tuya IoT Platform](https://iot.tuya
 
 ## Technical Details
 
-- **Communication:** Local Tuya protocol via [tinytuya](https://github.com/jasonacox/tinytuya) — no cloud polling
+- **Communication:** Local Tuya protocol via [tinytuya](https://github.com/jasonacox/tinytuya) - no cloud polling
 - **Connection:** Persistent TCP with automatic reconnection on errors
 - **Polling:** 30-second update interval via `DataUpdateCoordinator`
-- **Library:** [petsnowy-py](https://github.com/hypercubian/petsnowy-py) — async Python library for PetSnowy devices
+- **Library:** [petsnowy-py](https://github.com/hypercubian/petsnowy-py) - async Python library for PetSnowy devices
 
 ## Contributing
 
