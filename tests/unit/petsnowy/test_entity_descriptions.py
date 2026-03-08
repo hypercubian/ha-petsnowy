@@ -75,7 +75,7 @@ class TestPurifierEntities:
 
     def test_has_switches(self) -> None:
         """Purifier exposes switches."""
-        assert len(_SWITCHES_BY_TYPE[DEVICE_TYPE_PURIFIER]) == 2
+        assert len(_SWITCHES_BY_TYPE[DEVICE_TYPE_PURIFIER]) == 1
 
     def test_has_binary_sensors(self) -> None:
         """Purifier exposes fault binary sensors."""
@@ -83,7 +83,7 @@ class TestPurifierEntities:
 
     def test_has_selects(self) -> None:
         """Purifier exposes select entities."""
-        assert len(_SELECTS_BY_TYPE[DEVICE_TYPE_PURIFIER]) == 3
+        assert len(_SELECTS_BY_TYPE[DEVICE_TYPE_PURIFIER]) == 1
 
 
 class TestFeederEntities:
